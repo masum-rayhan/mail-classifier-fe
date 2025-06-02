@@ -1,12 +1,69 @@
-# React + Vite
+# Mail Classifier Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the Mail Classifier app, built with React (Vite).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add multiple email messages
+- Remove/edit messages before sending
+- Classify all messages in one click
+- Clean UI
+  
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+```sh
+git clone https://github.com/masum-rayhan/mail-classifier-fe.git
+cd mail-classifier-fe
+npm install
+```
+
+### Development
+
+```sh
+npm run dev
+```
+
+
+### Production Build
+
+```sh
+npm run build
+```
+
+### Configuration
+
+- By default, the frontend sends requests to `https://localhost:7250/api/EmailClassifier/classify`.
+- Update the API URL in `src/App.jsx` if your backend runs elsewhere.
+
+### Environment Variables (optional)
+
+If you wish to make the API endpoint configurable, create a `.env` file:
+
+```
+VITE_API_URL=https://localhost:7250/api/EmailClassifier/classify
+```
+
+And update the fetch calls accordingly.
+
+## Project Structure
+
+```
+src/
+  App.jsx
+  App.css
+  main.jsx
+  index.css
+public/
+  ...
+```
+
+## License
+
+MIT
